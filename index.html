@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>NYU Demo</title>
+    <link href="node_modules/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="node_modules/font-awesome/css/font-awesome.min.css" rel="stylesheet">
+</head>
+
+<body>
+    <div class="main-wrapper">
+        <header id="header">
+            <nav class="navbar navbar-fixed-top">
+                <div class="container">
+                    <div class="navbar-header">
+                        <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+                            <span class="sr-only">Toggle navigation</span>
+                            <span class="icon-bar"></span>
+                            <span class="icon-bar"></span>
+                            <span class="icon-bar"></span>
+                        </button>
+                        <h1 id="logo"><a href="#"><img src="src/assets/images/nyu_logo.png"></a></h1>
+                    </div>
+                    <div id="navbar" class="collapse navbar-collapse">
+                    <a href="" class="logout">Logout</a>
+                        <ul class="nav navbar-nav">
+                            <li class="active"><a href="#">Locations</a></li>
+                            <li><a href="#about">Insurance</a></li>
+                            <li><a href="#contact">Sorting</a></li>
+                            <li><a href="#contact">Onboarding</a></li>
+                            <li class="last"><a href="#contact">Reports</a></li>
+                        </ul>
+                        
+                    </div>
+                    <!--/.nav-collapse -->
+                </div>
+            </nav>
+        </header>
+        <div class="container theme-showcase" role="main">
+            <div class="row-holder col-md-12">
+                <div class="border-box">
+                    <h2 class="main-title">Locations</h2>
+                    <ul class="list-view">
+                        <li class=""><a href=""><i class="fa fa-building" aria-hidden="true"></i>Group Locations</a></li>
+                        <li class=""><a href=""><i class="fa fa-sitemap" aria-hidden="true"></i>Location Mapping</a></li>
+                        <li class=""><a href=""><i class="fa fa-phone" aria-hidden="true"></i>Phone Overrides</a></li>
+                        <li class=""><a href=""><i class="fa fa-strikethrough" aria-hidden="true"></i>Practice Name <span class="spn-brk"></span>Overrides</a></li>
+                        <li class=""><a href=""><i class="fa fa-arrows" aria-hidden="true"></i>Ranking Locations</a></li>
+                        <li class=""><a href=""><i class="fa fa-map-marker" aria-hidden="true"></i>Virtual Locations</a></li>
+                        <li class=""><a href=""><i class="fa fa-street-view" aria-hidden="true"></i>Wayfinding</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="row-holder">
+                <div class="col-md-3">
+                    <div class="border-box">
+                        <h2 class="main-title">Insurance</h2>
+                        <ul class="list-view list-view-single">
+                            <li class=""><a href=""><i class="fa fa-heart" aria-hidden="true"></i>Insurance</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-md-3">
+                    <div class="border-box">
+                        <h2 class="main-title">Onboarding</h2>
+                        <ul class="list-view  list-view-single">
+                            <li class=""><a href=""><i class="fa fa-check-circle" aria-hidden="true"></i>Health Clearance</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-md-6 ">
+                    <div class="border-box">
+                        <h2 class="main-title">Sorting</h2>
+                        <ul class="list-view list-view-double">
+                            <li class=""><a href=""><i class="fa fa-medkit" aria-hidden="true"></i>Sort by<span class="spn-brk"></span> Conditions</a></li>
+                            <li class=""><a href=""><i class="fa fa-stethoscope" aria-hidden="true"></i>Sort by<span class="spn-brk"></span> Specialty</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="row-holder">
+                <div class=" col-md-12">
+                    <div class="border-box">
+                        <h2 class="main-title">Reports</h2>
+                        <ul class="list-view">
+                            <li class=""><a href=""><i class="fa fa-bar-chart" aria-hidden="true"></i>Location Reports</a></li>
+                            <li class=""><a href=""><i class="fa fa-picture-o" aria-hidden="true"></i>Photo Report</a></li>
+                            <li class=""><a href=""><i class="fa fa-line-chart" aria-hidden="true"></i>Usage Logs</a></li>
+                            <li class=""><a href=""><i class="fa fa-user-md" aria-hidden="true"></i>Waiver<span class="spn-brk"></span> Status(.csv)</a></li>
+                            <li class=""><a href=""><i class="fa fa-file-text" aria-hidden="true"></i>Waiver <span class="spn-brk"></span>NYS(PDF)</a></li>
+                            <li class=""><a href=""><i class="fa fa-table" aria-hidden="true"></i>Waiver <span class="spn-brk"></span>NYS(.csv)</a></li>
+                            <li class=""><a href=""><i class="fa fa-pie-chart" aria-hidden="true"></i>Waiver <span class="spn-brk"></span>Tableau</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="dist/bundle.js"></script>
+</body>
+
+</html>

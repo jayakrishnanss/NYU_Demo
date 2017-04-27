@@ -1,0 +1,226 @@
+@import 'common';
+
+/*------------------Layout,Table of Contents-----------------------------------------------------------------
+1. BASIC STYLING FOR COMMON HTML ELEMENTS
+2. COMMON CSS CLASSES
+3. HEADER SECTION
+4. BODY SECTION
+5. FOOTER SECTION
+-----------------------------------------------------------------------------------------------------------*/
+
+
+/*................................................
+    1. BASIC STYLING FOR COMMON HTML ELEMENTS
+.................................................*/
+
+body {
+    @include font(HelveticaNeue, normal, normal);
+    font-family: Arial;
+    padding-top: 100px;
+    @include max-screen(767px) {
+        padding-top: 57px;
+    }
+}
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+a {
+    text-decoration: none;
+    outline: none;
+    border: none;
+}
+
+a:hover,
+a:focus,
+a:active {
+    text-decoration: none;
+}
+
+
+/*................................................
+    2. COMMON CSS CLASSES
+.................................................*/
+
+.border-box {
+    @include border-radius(5px);
+    border: 1px solid $primary-color;
+    margin-bottom: 23px;
+    padding: 20px 30px;
+}
+
+.spn-brk {
+    display: block;
+}
+
+.main-title {
+    @include font(HelveticaNeue, normal, bold);
+    font-family: Arial;
+    font-size: 24px;
+    color: #2272cc;
+    margin-top: 0;
+}
+
+
+/*................................................
+    3. HEADER SECTION
+.................................................*/
+
+.navbar-header {
+    h1 {
+        margin: 0;
+        padding-right: 46px;
+        @include max-screen(767px) {
+            padding: 0;
+            text-align: center;
+        }
+    }
+}
+
+#header {
+    .navbar {
+        background: $primary-color;
+        border: 0;
+        min-height: 80px;
+        border-radius: 0;
+        @include max-screen(767px) {
+            min-height: 47px;
+            background: transparent;
+        }
+        .navbar-header {
+            @include max-screen(767px) {
+                background: $primary-color;
+            }
+        }
+        .navbar-nav {
+            @include max-screen(767px) {
+                padding-top: 34px;
+                margin-bottom: 0;
+            }
+            li {
+                a {
+                    @include font(HelveticaNeue, normal, normal);
+                    font-family: Arial;
+                    font-size: 18px;
+                    color: #ffffff;
+                    padding: 30px 16px 30px 18px;
+                    @include max-screen(767px) {
+                        color: $primary-color;
+                        font-size: 18px;
+                        font-weight: bold;
+                        padding: 15px 22px;
+                        &:hover,
+                        &.active,
+                        &.focus {
+                            background: transparent;
+                        }
+                    }
+                }
+                @include min-screen(768px) {
+                    &:hover,
+                    &.active {
+                        a {
+                            background: $secondary-color;
+                        }
+                    }
+                }
+                @include max-screen(767px) {
+                    border-top: 1px solid $border-color;
+                    &.last {
+                        border-bottom: 3px solid $border-color;
+                    }
+                }
+            }
+        }
+        .navbar-collapse {
+            @include max-screen(767px) {
+                background: $menu-bg-color;
+            }
+        }
+        #logo {
+            img {
+                margin: 13px 0 17px 0;
+                @include max-screen(767px) {
+                    width: 91px;
+                    margin-top: 0;
+                    margin-bottom: 10px;
+                }
+            }
+        }
+        .logout {
+            float: right;
+            font-size: 14px;
+            color: #ffffff;
+            @include font(HelveticaNeue, normal, bold);
+            font-family: Arial;
+            margin-top: 10px;
+            @include max-screen(767px) {
+                display: block;
+                color: $primary-color;
+                font-size: 16px;
+            }
+        }
+        .navbar-toggle {
+            float: left;
+            margin-left: 5px;
+            margin-bottom: 10px;
+            .icon-bar {
+                background: $hamberger-menu-color;
+                width: 31px;
+                height: 5px;
+            }
+            @include max-screen(767px) {
+                margin: 0 0 0 5px;
+                padding-top: 8px;
+            }
+        }
+    }
+}
+
+
+/*................................................
+    4. BODY SECTION
+.................................................*/
+
+.list-view {
+    display: flex;
+    align-items: center;
+    margin: 0;
+    padding: 0;
+    flex-wrap: wrap;
+    justify-content: center;
+    li {
+        list-style: none;
+        width: 25%;
+        padding: 44px 0;
+        a {
+            color: $icon-text-color;
+            font-size: 16px;
+            display: block;
+            line-height: 18px;
+            text-align: center;
+            i {
+                display: block;
+                color: $primary-color;
+                font-size: 64px;
+                margin-bottom: 14px;
+            }
+        }
+        @include max-screen(767px) {
+            width: 50%;
+        }
+    }
+    &.list-view-single {
+        li {
+            width: auto;
+        }
+    }
+    &.list-view-double {
+        li {
+            width: 50%;
+            padding-bottom: 24px;
+        }
+    }
+}
