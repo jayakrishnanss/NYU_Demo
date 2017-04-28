@@ -18,7 +18,7 @@ body {
     font-family: Arial;
     padding-top: 100px;
     @include max-screen(767px) {
-        padding-top: 57px;
+        padding-top: 47px;
     }
 }
 
@@ -49,6 +49,11 @@ a:active {
     border: 1px solid $primary-color;
     margin-bottom: 23px;
     padding: 20px 30px;
+    @include max-screen(767px) {
+        border: 0;
+        margin-bottom: 0;
+        padding: 15px 0 0 0;
+    }
 }
 
 .spn-brk {
@@ -61,6 +66,20 @@ a:active {
     font-size: 24px;
     color: #2272cc;
     margin-top: 0;
+    @include screen(768, 990px) {
+        font-size: 20px;
+    }
+    @include max-screen(767px) {
+        text-align: center;
+        margin-bottom: 13px;
+    }
+}
+
+.mobile-view {
+    display: none;
+    @include max-screen(767px) {
+        display: inline-block;
+    }
 }
 
 
@@ -116,6 +135,13 @@ a:active {
                         &.focus {
                             background: transparent;
                         }
+                        i {
+                            float: right;
+                            font-size: 24px;
+                        }
+                    }
+                    @include screen(768px, 990px) {
+                        font-size: 14px;
                     }
                 }
                 @include min-screen(768px) {
@@ -146,6 +172,7 @@ a:active {
                     width: 91px;
                     margin-top: 0;
                     margin-bottom: 10px;
+                    margin-left: -53px;
                 }
             }
         }
@@ -166,14 +193,18 @@ a:active {
             float: left;
             margin-left: 5px;
             margin-bottom: 10px;
-            .icon-bar {
-                background: $hamberger-menu-color;
-                width: 31px;
-                height: 5px;
+            .fa-bars {
+                color: $hamberger-menu-color;
+                font-size: 24px;
+            }
+            &.collapsed {
+                .fa-bars {
+                    color: $white;
+                }
             }
             @include max-screen(767px) {
                 margin: 0 0 0 5px;
-                padding-top: 8px;
+                padding-top: 14px;
             }
         }
     }
@@ -186,7 +217,7 @@ a:active {
 
 .list-view {
     display: flex;
-    align-items: center;
+    align-items: flex-start;
     margin: 0;
     padding: 0;
     flex-wrap: wrap;
@@ -206,10 +237,23 @@ a:active {
                 color: $primary-color;
                 font-size: 64px;
                 margin-bottom: 14px;
+                @include max-screen(990px) {
+                    font-size: 48px;
+                }
+                @include max-screen(767px) {
+                    font-size: 36px;
+                }
             }
+            @include max-screen(767px) {
+                font-size: 14px;
+            }
+        }
+        @include max-screen(990px) {
+            padding: 20px 0;
         }
         @include max-screen(767px) {
             width: 50%;
+            padding: 0 0 28px 0;
         }
     }
     &.list-view-single {
