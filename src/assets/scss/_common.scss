@@ -5,6 +5,7 @@ $hamberger-menu-color:#00cc99;
 $menu-bg-color:rgba(255, 255, 255, 0.95);
 $border-color: #979797;
 $white: #fff;
+$font-family: helveticaneue;
 @mixin border-radius($radius) {
     -webkit-border-radius: $radius;
     -moz-border-radius: $radius;
@@ -12,7 +13,18 @@ $white: #fff;
     border-radius: $radius;
 }
 
-@mixin font($font, $style, $weight) {
+@font-face {
+    font-family: $font-family;
+    src: url('fonts/#{$font-family}.eot');
+    src: url('fonts/#{$font-family}.eot?#iefix') format('embedded-opentype'),
+    url('fonts/#{$font-family}.svg##{$font-family}') format('svg'),
+    url('fonts/#{$font-family}.woff') format('woff'),
+    url('fonts/#{$font-family}.ttf') format('truetype');
+}
+
+@mixin font($font,
+$style,
+$weight) {
     font-family: $font;
     font-style: $style;
     font-weight: $weight;
@@ -24,7 +36,8 @@ $white: #fff;
     $media-type-key: 'media-type';
     $args: keywords($args);
     $expr: '';
-    @if map-has-key($args, $media-type-key) {
+    @if map-has-key($args,
+    $media-type-key) {
         $media-type: map-get($args, $media-type-key);
         $args: map-remove($args, $media-type-key);
     }
@@ -40,7 +53,9 @@ $white: #fff;
 }
 
 // --- screen ------------------------------------------------------------------
-@mixin screen($min, $max, $orientation: false) {
+@mixin screen($min,
+$max,
+$orientation: false) {
     @include mq($min-width: $min, $max-width: $max, $orientation: $orientation) {
         @content;
     }
@@ -64,7 +79,9 @@ $white: #fff;
     }
 }
 
-@mixin screen-height($min, $max, $orientation: false) {
+@mixin screen-height($min,
+$max,
+$orientation: false) {
     @include mq($min-height: $min, $max-height: $max, $orientation: $orientation) {
         @content;
     }
