@@ -143,9 +143,10 @@ a:active {
                 }
                 @include min-screen(768px) {
                     &:hover,
-                    &.active {
+                    &:active,
+                    &:focus {
                         a {
-                            background: $secondary-color;
+                            background-color: $secondary-color;
                         }
                     }
                 }
@@ -155,6 +156,10 @@ a:active {
                         border-bottom: 3px solid $border-color;
                     }
                 }
+            }
+            &.nav>li>a:focus, &.nav>li>a:hover,
+             &.nav>li>a:visited {
+                background-color: $secondary-color;
             }
         }
         .navbar-collapse {
